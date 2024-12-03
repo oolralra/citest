@@ -32,8 +32,8 @@ jobs:
         echo "DOCKER_REGISTRY=oolralra" >> $GITHUB_ENV
         echo "DOCKER_REPOSITORY=fast" >> $GITHUB_ENV #본인 ecr레포에 맞게 수정
         echo "IMAGE_TAG=${{ github.run_number }}" >> $GITHUB_ENV
-        echo "GIT_EMAIL=pcmin929@gmail.com" >> $GITHUB_ENV
-        echo "GIT_NAME=pcmin929" >> $GITHUB_ENV
+        echo "GIT_EMAIL=oolralra@gmail.com" >> $GITHUB_ENV
+        echo "GIT_NAME=oolralra" >> $GITHUB_ENV
    
     - name: Docker Image Build
       id: build-image
@@ -48,7 +48,7 @@ jobs:
     - name: Checkout Deployment Repository
       uses: actions/checkout@v4
       with:
-        repository: pcmin929/deployment #본인에 맞게 수정
+        repository: oolralra/my_deploy #본인에 맞게 수정
         ref: main  # branch
 
     - name: k8s manifest update
